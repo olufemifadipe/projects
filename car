@@ -1,0 +1,85 @@
+public class Car 
+  {
+    
+private String manufacturer;
+private String model;
+private int year; 
+private double price;
+private static int totalCar=0;
+
+public Car(String m, String mo, int y, double p)
+
+  {
+  manufacturer=m;
+  model=mo;
+  year=y; 
+  price=p;
+  totalCar++;
+  }
+
+public Car(String m, String mo, int y)
+
+  {
+  manufacturer=m;
+  model=mo;
+  year=y;
+  price=0;
+  totalCar++;
+  }
+
+public void setManufacturer(String m)
+  {
+  manufacturer=m;
+  }
+
+public void setModel(String mo)
+  {
+  model=mo; 
+  }
+
+public void setYear(int y)
+  {
+  year=y;  
+  }
+
+public void setPrice(double p)
+  {
+  price=p;
+  }
+
+
+
+public String getManufacturer()
+  {
+  return manufacturer;
+  }
+
+public String getModel()
+  {
+  return model;  
+  }
+
+public int getYear()
+  {
+  return year;  
+  }
+
+public double getPrice()
+  {
+  return price;
+  }
+
+public String toString()
+ {
+  
+ }
+  public Boolean equals ()
+{
+  
+}
+public void howManyCars()
+{
+  System.out.print(totalCar);
+}
+
+}
