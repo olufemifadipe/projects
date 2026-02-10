@@ -68,18 +68,34 @@ public double getPrice()
   {
   return price;
   }
-
+@Override
 public String toString()
  {
-  
+  return manufacturer + " " + model + " " + year + " $" +price;  
  }
-  public Boolean equals ()
+ @Override
+  public boolean equals (Object obj)
 {
+  if (this == obj )return true;
+  if (obj == null || getClass()!= obj.getClass() ) return false; 
   
+  Car other = (Car) obj;
+  
+  if ( year == other.year &&
+  manufacturer.equals(other.manufacturer) && 
+  model.equals(other.model))
+  {
+    return true;
+  }
+  else
+  {
+  return false;  
+  }
+
 }
 public void howManyCars()
 {
-  System.out.print(totalCar);
+  System.out.print("Total Cars :"+totalCar);
 }
 
 }
