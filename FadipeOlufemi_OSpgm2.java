@@ -28,9 +28,9 @@ public class FadipeOlufemi_OSpgm2
     String binary = "";
     int x;
 
-    for (x = 0; x < hex.length(); x++) 
+    for (x = 0; x < hex.length(); x++)
     {
-    char c = hex.charAt(x);
+    char c = Character.toUpperCase(hex.charAt(x));
 
     switch (c) //switch stament
     {
@@ -51,6 +51,7 @@ public class FadipeOlufemi_OSpgm2
     case 'D': binary += "1101"; break;
     case 'E': binary += "1110"; break;
     case 'F': binary += "1111"; break;
+    default: throw new IllegalArgumentException("Invalid hex digit: " + c);
     }
 
     }
@@ -64,12 +65,12 @@ public class FadipeOlufemi_OSpgm2
     // convertion from binary to decimal
     long decimal = 0;
     int x;
-    for (x = 0; x < binary.length(); x++) 
+    for (x = 0; x < binary.length(); x++)
     {
     char c = binary.charAt(x);
-    if (c == '1') 
+    if (c == '1')
     {
-    decimal += Math.pow(2, binary.length() - x - 1);
+    decimal |= (1L << (binary.length() - x - 1));
     }
 
     }
